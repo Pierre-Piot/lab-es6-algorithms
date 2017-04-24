@@ -4,6 +4,7 @@ var ArrayFunctions = function (){}
 // ArrayFunctions.printSpecial([12, 33, 144, 122])
 // 12 -- 33 -- 144 -- 122
 
+
 ArrayFunctions.printSpecial = function (array) {
   return array.join(" --- ");
 };
@@ -31,3 +32,26 @@ ArrayFunctions.superPower = function(array){
 }
 
 module.exports = ArrayFunctions;
+
+
+
+var array1 = [3, 5, 8, 9, 13, 37]
+var array2 = [1,2,3,4,5]
+
+class Crazy {
+  static printSpecial(array){
+    return array.join(" --- ");
+  }
+  static doubleArray(array) {
+    return array.map(number => number * 2);
+  }
+  static superPower (array){
+    return array.reduce((acc, curVal, index)  => (acc + (curVal * (Math.pow(10, index)))));
+  }
+}
+
+
+
+console.log(Crazy.printSpecial(array1));
+console.log(Crazy.doubleArray(array1));
+console.log(Crazy.superPower(array2));
